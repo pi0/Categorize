@@ -10,20 +10,27 @@ parser.add_argument("dst", help="destination directory to move files")
 parser.add_argument("-v", "--verbosity", help="increase output verbosity", action="store_true")
 args = parser.parse_args()
 
-
 for root, dirs, files in os.walk(args.src):
     for file in files:
         full_name = os.path.join(root, file)
-        ext = os.path.splitext(full_name)[1][1:]
+        name, ext = os.path.splitext(full_name)
+        ext = ext[1:]
+        name = os.path.basename(name)
         if ext == '':
             ext = 'unknown'
-        dst = os.path.join(args.dst, ext)
-        os.makedirs(dst, exist_ok=True)
+
+        dst = os.path.join(args.dst, ext, name + '.' + ext)
+        suffix = 1
+        while os.path.exists(dst):
+            dst = os.path.join(args.dst, ext, name + '.' + str(suffix) + '.' + ext)
+            suffix += 1
+
+        os.makedirs(os.path.join(args.dst, ext), exist_ok=True)
         if args.verbosity:
             print(full_name + ' -> ' + dst)
-        try: 
+        try:
             shutil.move(full_name, dst)
         except:
-            print('Unable to move '+full_name+' to '+dst);
+            print('unable to move ' + full_name + ' to ' + dst)
 
 print('Done!')

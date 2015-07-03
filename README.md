@@ -7,7 +7,7 @@ I wrote this simple script to categorize recovered files by photo-rec utility :)
 For a quick and dirty install:
 
 ```bash
-sudo wget https://raw.githubusercontent.com/pi0/Categorize/master/caregorize.py -O /usr/local/bin/categorize && sudo chmod +x /usr/local/bin/categorize && hash -r && echo "DONE :)"
+sudo wget https://raw.githubusercontent.com/pi0/Categorize/master/categorize.py -O /usr/local/bin/categorize && sudo chmod +x /usr/local/bin/categorize && hash -r && echo "DONE :)"
 ```  
 # Usage
 categorize [-h] [-v] src dst  
