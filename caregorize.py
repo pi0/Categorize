@@ -22,8 +22,8 @@ for root, dirs, files in os.walk(args.src):
         if args.verbosity:
             print(full_name + ' -> ' + dst)
        	try: 
-					shutil.move(full_name, dst)
+            shutil.move(full_name, dst)
 				except:
-					print('Unable to move '+full_name+' to '+dst);
+            print('Unable to move '+full_name+' to '+dst);
 
 print('Done!')
