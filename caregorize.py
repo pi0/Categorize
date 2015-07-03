@@ -21,9 +21,9 @@ for root, dirs, files in os.walk(args.src):
         os.makedirs(dst, exist_ok=True)
         if args.verbosity:
             print(full_name + ' -> ' + dst)
-       	try: 
+        try: 
             shutil.move(full_name, dst)
-				except:
+        except:
             print('Unable to move '+full_name+' to '+dst);
 
 print('Done!')
