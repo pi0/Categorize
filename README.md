@@ -9,13 +9,13 @@ For a quick and dirty install:
 ```bash
 sudo wget https://raw.githubusercontent.com/pi0/Categorize/master/caregorize.py -O /usr/local/bin/categorize && sudo chmod +x /usr/local/bin/categorize && hash -r && echo "DONE :)"
 ```  
-#Usage
+# Usage
 categorize [-h] [-v] src dst  
 
-##positional arguments:  
+### positional arguments:  
   src              source directory of files  
   dst              destination directory to move files  
  
-optional arguments:  
+### optional arguments:  
   -h, --help       show this help message and exit  
   -v, --verbosity  increase output verbosity  
