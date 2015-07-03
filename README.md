@@ -6,15 +6,16 @@ I wrote this simple script to categorize recovered files by photo-rec utility :)
 #Quick install
 For a quick and dirty install:
 
-    sudo wget https://raw.githubusercontent.com/pi0/Categorize/master/caregorize.py -O /usr/local/bin/categorize && sudo chmod +x /usr/local/bin/categorize && hash -r && echo "DONE :)"
-    
+```bash
+sudo wget https://raw.githubusercontent.com/pi0/Categorize/master/caregorize.py -O /usr/local/bin/categorize && sudo chmod +x /usr/local/bin/categorize && hash -r && echo "DONE :)"
+```  
 #Usage
-usage: categorize [-h] [-v] src dst
+categorize [-h] [-v] src dst  
 
-positional arguments:
-  src              source directory of files
-  dst              destination directory to move files
-
-optional arguments:
-  -h, --help       show this help message and exit
-  -v, --verbosity  increase output verbosity
+##positional arguments:  
+  src              source directory of files  
+  dst              destination directory to move files  
+ 
+optional arguments:  
+  -h, --help       show this help message and exit  
+  -v, --verbosity  increase output verbosity  
